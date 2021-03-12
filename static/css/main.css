@@ -19,13 +19,13 @@
     margin-bottom: 1em;    
 }
 
-.img-preview>div {
+/*.img-preview>div {
     width: 100%;
     height: 100%;
     background-size: 256px 256px;
     background-repeat: no-repeat;
     background-position: center;
-}
+}*/
 
 input[type="file"] {
     display: none;

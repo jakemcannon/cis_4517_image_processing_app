@@ -18,20 +18,29 @@
 		<p>Step 1: Upload a photo<p>
 		<p>Step 2: Select a filter<p>
 		<p>Step 3: Click transform button<p>
-		<form id ="upload-photo" method="post">
-		<label class="btn btn-primary">
-			Upload image
-		</label>
-		<br>
-		<br>
-		<label class="btn btn-primary">
+
+
+		<form action="/home" method="POST" enctype="multipart/form-data">
+
+			<div class="form-group">
+	          <label>Select image</label>
+	          <div class="custom-file">
+	            <input type="file" class="custom-file-input" name="image" id="image">
+	            <label class="custom-file-label" for="image">Select image...</label>
+	          </div>
+	        </div>
+	        <input type="radio" id="grayscale" value="grayscale" name="transformation">
+	        <label for="grayscale">Grayscale</label>
+	        <input type="radio" id="poster" value="poster" name="transformation">
+	        <label for="poster">Poster</label>
+	        <input type="radio" id="solar" value="solar" name="transformation">
+	         <label for="solar">Solar</label>
+	        <!-- <button type="submit" class="btn btn-primary">Upload</button> -->
+	        <button type="submit" class="btn btn-success" id="btn-predict">Transform!</button>
+	    </form>
+		<!-- <label class="btn btn-primary">
 			Select filter
-		</label>
-		<br>
-		<br>
-		<div>
-            <button type="button" class="btn btn-success" id="btn-predict">Transform!</button>
-        </div>
+		</label> -->
 	</form>
 	</div>
 	</center>

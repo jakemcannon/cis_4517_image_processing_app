@@ -10,9 +10,9 @@ local_file_name = 'test_image.jpg'
 client = boto3.client('s3', aws_access_key_id = config.api_key, aws_secret_access_key = config.api_secret)
 # client = boto3.client('s3')
 
-def upload(file_name, bucket, object_name):
+def upload(file_name, object_name):
 
-	response = client.upload_file(file_name, bucket, object_name)
+	response = client.upload_file(file_name, bucket_name, object_name, ExtraArgs={'ACL':'public-read'})
 	return response
 
 
